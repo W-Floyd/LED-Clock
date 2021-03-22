@@ -19,9 +19,19 @@
 
 #include <NTPClient.h>
 #include <WiFiUdp.h>
+#include <Timezone.h>
+
+// US Central Time Zone (Chicago, Houston)
+TimeChangeRule usCDT = {"CDT", Second, Sun, Mar, 2, -300};
+TimeChangeRule usCST = {"CST", First, Sun, Nov, 2, -360};
+Timezone myTZ(usCDT, usCST);
+
+TimeChangeRule *tcr; // pointer to the time change rule, use to get TZ abbrev
 
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP);
+
+time_t oldtime, newtime;
 
 uint8_t max_bright = 255;
 
@@ -127,8 +137,9 @@ void chooseDigit(uint8_t digit, uint8_t number)
 
 void showTime()
 {
-  int minutes = timeClient.getMinutes();
-  int hours = timeClient.getHours();
+
+  int minutes = minute(newtime);
+  int hours = hour(newtime);
 
   int minTop = minutes / 10;
   int minBot = minutes - minTop * 10;
@@ -143,7 +154,7 @@ void showTime()
 }
 
 /* Your WiFi Credentials */
-const char *ssid = "letnet-connect";    // SSID
+const char *ssid = "letnet-connect";     // SSID
 const char *password = "letnet-connect"; // Password
 
 void setup()
@@ -171,14 +182,21 @@ void setup()
   blankSegments(d4);
   FastLED.show();
 
-  timeClient.setTimeOffset(-3600 * 6);
-
   timeClient.begin();
+  timeClient.forceUpdate();
 }
 
 void loop()
 {
   timeClient.update();
-  showTime();
+  newtime = myTZ.toLocal(timeClient.getEpochTime(), &tcr);
+  if (minute(newtime) != minute(oldtime))
+  {
+    oldtime = newtime;
+    showTime();
+    Serial.print(hour(newtime));
+    Serial.print(":");
+    Serial.println(minute(newtime));
+  }
   FastLED.show();
 }
