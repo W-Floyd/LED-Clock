@@ -1,0 +1,130 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 34
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 3100 2450 550  500 
+U 607DD2DB
+F0 "LED_Array" 50
+F1 "LED_Array.sch" 50
+F2 "DIN" I L 3100 2600 50 
+F3 "VDD" I L 3100 2700 50 
+F4 "VSS" I L 3100 2800 50 
+F5 "DOUT" I L 3100 2500 50 
+$EndSheet
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 607E7BCA
+P 2300 2700
+F 0 "U1" H 2300 1650 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 2300 1550 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 2300 1550 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 450 1550 50  0001 C CNN
+	1    2300 2700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1900 2300
+NoConn ~ 1900 2600
+NoConn ~ 1900 2700
+NoConn ~ 2700 3100
+NoConn ~ 2700 3000
+NoConn ~ 2700 2900
+NoConn ~ 2700 2800
+NoConn ~ 2700 2200
+NoConn ~ 2700 2300
+NoConn ~ 2700 2400
+NoConn ~ 2700 2500
+NoConn ~ 2700 2700
+$Comp
+L power:GND #PWR0101
+U 1 1 607E8D5F
+P 2300 3500
+F 0 "#PWR0101" H 2300 3250 50  0001 C CNN
+F 1 "GND" H 2305 3327 50  0000 C CNN
+F 2 "" H 2300 3500 50  0001 C CNN
+F 3 "" H 2300 3500 50  0001 C CNN
+	1    2300 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 607E93BD
+P 2200 1900
+F 0 "#PWR0102" H 2200 1750 50  0001 C CNN
+F 1 "+5V" H 2215 2073 50  0000 C CNN
+F 2 "" H 2200 1900 50  0001 C CNN
+F 3 "" H 2200 1900 50  0001 C CNN
+	1    2200 1900
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2400 1900
+$Comp
+L power:+5V #PWR0104
+U 1 1 607E9E85
+P 3100 2700
+F 0 "#PWR0104" H 3100 2550 50  0001 C CNN
+F 1 "+5V" V 3115 2828 50  0000 L CNN
+F 2 "" H 3100 2700 50  0001 C CNN
+F 3 "" H 3100 2700 50  0001 C CNN
+	1    3100 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 2600 3100 2600
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 60802B91
+P 3450 1850
+F 0 "J1" H 3530 1842 50  0000 L CNN
+F 1 "Conn_01x02" H 3530 1751 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical" H 3450 1850 50  0001 C CNN
+F 3 "~" H 3450 1850 50  0001 C CNN
+	1    3450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 608032A4
+P 3250 1850
+F 0 "#PWR0105" H 3250 1700 50  0001 C CNN
+F 1 "+5V" V 3265 1978 50  0000 L CNN
+F 2 "" H 3250 1850 50  0001 C CNN
+F 3 "" H 3250 1850 50  0001 C CNN
+	1    3250 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 60803661
+P 3250 1950
+F 0 "#PWR0106" H 3250 1700 50  0001 C CNN
+F 1 "GND" V 3255 1822 50  0000 R CNN
+F 2 "" H 3250 1950 50  0001 C CNN
+F 3 "" H 3250 1950 50  0001 C CNN
+	1    3250 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 607E9ABD
+P 3100 2800
+F 0 "#PWR0103" H 3100 2550 50  0001 C CNN
+F 1 "GND" V 3105 2672 50  0000 R CNN
+F 2 "" H 3100 2800 50  0001 C CNN
+F 3 "" H 3100 2800 50  0001 C CNN
+	1    3100 2800
+	0    1    1    0   
+$EndComp
+NoConn ~ 3100 2500
+$EndSCHEMATC

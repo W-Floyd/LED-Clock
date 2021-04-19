@@ -1,0 +1,5 @@
+Comment,Designator,Footprint,LCSC Part #
+C Unpolarized capacitor,"C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28",C_0402_1005Metric,C1525
+WS2812B RGB LED with integrated controller,"D1,D2,D3,D4,D5,D6,D7,D8,D9,D10,D11,D12,D13,D14,D15,D16,D17,D18,D19,D20,D21,D22,D23,D24,D25,D26,D27,D28",LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,C114586
+"Conn_01x02 Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",J1,JST_XH_B2B-XH-AM_1x02_P2.50mm_Vertical,
+WeMos_D1_mini 32-bit microcontroller module with WiFi,U1,WEMOS_D1_mini_light,

@@ -1,0 +1,128 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 34
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text HLabel 3000 1500 0    50   Input ~ 0
+DIN
+Text HLabel 3000 1700 0    50   Input ~ 0
+VDD
+Text HLabel 3000 1800 0    50   Input ~ 0
+VSS
+Wire Wire Line
+	3500 1500 3000 1500
+Wire Wire Line
+	3500 2300 3450 2300
+Wire Wire Line
+	3450 2300 3450 1600
+Wire Wire Line
+	3450 1600 3500 1600
+Wire Wire Line
+	3500 2400 3450 2400
+Wire Wire Line
+	3450 2400 3450 3100
+Wire Wire Line
+	3450 3100 3500 3100
+Wire Wire Line
+	3500 3200 3450 3200
+Wire Wire Line
+	3450 3200 3450 3900
+Wire Wire Line
+	3450 3900 3500 3900
+Text HLabel 3000 1600 0    50   Input ~ 0
+DOUT
+Wire Wire Line
+	3000 1600 3400 1600
+Wire Wire Line
+	3400 1600 3400 4000
+Wire Wire Line
+	3400 4000 3500 4000
+Wire Wire Line
+	3000 1700 3350 1700
+Wire Wire Line
+	3500 1800 3300 1800
+Wire Wire Line
+	3500 2500 3350 2500
+Wire Wire Line
+	3350 2500 3350 1700
+Connection ~ 3350 1700
+Wire Wire Line
+	3350 1700 3500 1700
+Wire Wire Line
+	3500 3300 3350 3300
+Wire Wire Line
+	3350 3300 3350 2500
+Connection ~ 3350 2500
+Wire Wire Line
+	3500 4100 3350 4100
+Wire Wire Line
+	3350 4100 3350 3300
+Connection ~ 3350 3300
+Wire Wire Line
+	3500 4200 3300 4200
+Wire Wire Line
+	3300 4200 3300 3400
+Connection ~ 3300 1800
+Wire Wire Line
+	3300 1800 3000 1800
+Wire Wire Line
+	3500 2600 3300 2600
+Connection ~ 3300 2600
+Wire Wire Line
+	3300 2600 3300 1800
+Wire Wire Line
+	3500 3400 3300 3400
+Connection ~ 3300 3400
+Wire Wire Line
+	3300 3400 3300 2600
+$Sheet
+S 3500 1400 950  600 
+U 608622BF
+F0 "Character" 50
+F1 "Character.sch" 50
+F2 "DIN" I L 3500 1500 50 
+F3 "DOUT" I L 3500 1600 50 
+F4 "VDD" I L 3500 1700 50 
+F5 "VSS" I L 3500 1800 50 
+$EndSheet
+$Sheet
+S 3500 2200 950  600 
+U 607CAD30
+F0 "sheet607CAD2A" 50
+F1 "Character.sch" 50
+F2 "DIN" I L 3500 2300 50 
+F3 "DOUT" I L 3500 2400 50 
+F4 "VDD" I L 3500 2500 50 
+F5 "VSS" I L 3500 2600 50 
+$EndSheet
+$Sheet
+S 3500 3000 950  600 
+U 607CB281
+F0 "sheet607CB27B" 50
+F1 "Character.sch" 50
+F2 "DIN" I L 3500 3100 50 
+F3 "DOUT" I L 3500 3200 50 
+F4 "VDD" I L 3500 3300 50 
+F5 "VSS" I L 3500 3400 50 
+$EndSheet
+$Sheet
+S 3500 3800 950  600 
+U 607CB809
+F0 "sheet607CB803" 50
+F1 "Character.sch" 50
+F2 "DIN" I L 3500 3900 50 
+F3 "DOUT" I L 3500 4000 50 
+F4 "VDD" I L 3500 4100 50 
+F5 "VSS" I L 3500 4200 50 
+$EndSheet
+$EndSCHEMATC
