@@ -11,7 +11,7 @@
 #include "FastLED.h"
 
 #define NUM_LEDS 28
-#define DATA_PIN D5
+#define DATA_PIN D4
 
 #if FASTLED_VERSION < 3001000
 #error "Requires FastLED 3.1 or later; check github for latest code."
@@ -50,12 +50,15 @@ CRGB leds[NUM_LEDS];
 // const uint8_t d3[7] = {21, 25, 15, 22, 24, 14, 23};
 // const uint8_t d4[7] = {6, 12, 2, 5, 13, 3, 4};
 
-const uint8_t d1[7] = {4, 3, 13, 5, 2, 12, 6};
-const uint8_t d2[7] = {23, 14, 24, 22, 15, 25, 21};
-const uint8_t d3[7] = {7, 1, 11, 8, 0, 10, 9};
-const uint8_t d4[7] = {20, 16, 26, 19, 17, 27, 18};
+// const uint8_t d1[7] = {4, 3, 13, 5, 2, 12, 6};
+// const uint8_t d2[7] = {23, 14, 24, 22, 15, 25, 21};
+// const uint8_t d3[7] = {7, 1, 11, 8, 0, 10, 9};
+// const uint8_t d4[7] = {20, 16, 26, 19, 17, 27, 18};
 
-const uint8_t segments = 7;
+const uint8_t d1[7] = {0, 1, 2, 3, 4, 5, 6};
+const uint8_t d2[7] = {7, 8, 9, 10, 11, 12, 13};
+const uint8_t d3[7] = {14, 15, 16, 17, 18, 19, 20};
+const uint8_t d4[7] = {21, 22, 23, 24, 25, 26, 27};
 
 uint8_t hue = 0;
 uint8_t sat = 255;
@@ -63,7 +66,7 @@ uint8_t val = 63;
 
 void blankSegments(const uint8_t map[])
 {
-  for (int i = 0; i < segments; i++)
+  for (int i = 0; i < 7; i++)
   {
     leds[map[i]] = CRGB::Black;
   }
